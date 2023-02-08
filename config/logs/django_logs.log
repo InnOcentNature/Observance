@@ -1,0 +1,1203 @@
+2023-02-07 10:43:48,720 [ERROR] {log_response:241} : Internal Server Error: /dcu_node/
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 50, in get_all_duc_node
+    return render(request, 'data/dcu_node.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: data/dcu_node.html
+2023-02-07 10:43:48,766 [ERROR] {log_message:187} : "GET /dcu_node/ HTTP/1.1" 500 145
+2023-02-07 10:43:51,037 [ERROR] {log_response:241} : Internal Server Error: /meter_node/
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 85, in get_all_meter_node
+    return render(request, 'data/meter_node.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: data/meter_node.html
+2023-02-07 10:43:51,046 [ERROR] {log_message:187} : "GET /meter_node/ HTTP/1.1" 500 145
+2023-02-07 11:05:07,406 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 29, in load_dcus
+    all_dcus = Dcu.objects.all()
+               ^^^
+NameError: name 'Dcu' is not defined
+2023-02-07 11:05:07,415 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 145
+2023-02-07 11:05:37,837 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'draw'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 26, in load_dcus
+    draw = int(request_data['draw'])
+               ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'draw'
+2023-02-07 11:05:37,914 [ERROR] {log_message:187} : "GET /load_dcus HTTP/1.1" 500 145
+2023-02-07 11:07:36,648 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'draw'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 27, in load_dcus
+    draw = int(request_data['draw'])
+               ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'draw'
+2023-02-07 11:07:36,667 [ERROR] {log_message:187} : "GET /load_dcus HTTP/1.1" 500 145
+2023-02-07 11:07:38,252 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'draw'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 27, in load_dcus
+    draw = int(request_data['draw'])
+               ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'draw'
+2023-02-07 11:07:38,268 [ERROR] {log_message:187} : "GET /load_dcus HTTP/1.1" 500 145
+2023-02-07 11:07:40,344 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'draw'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 27, in load_dcus
+    draw = int(request_data['draw'])
+               ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'draw'
+2023-02-07 11:07:40,375 [ERROR] {log_message:187} : "GET /load_dcus HTTP/1.1" 500 145
+2023-02-07 11:07:45,216 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 47, in load_dcus
+    return JsonResponse(json_data)
+           ^^^^^^^^^^^^
+NameError: name 'JsonResponse' is not defined
+2023-02-07 11:07:45,262 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 145
+2023-02-07 11:18:58,946 [ERROR] {log_response:241} : Internal Server Error: /load_dcu_node_mappings
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 70, in load_dcu_node_mappings
+    "epochTime": dcu_node.epochTime,
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'DcuNode' object has no attribute 'epochTime'
+2023-02-07 11:18:58,957 [ERROR] {log_message:187} : "POST /load_dcu_node_mappings HTTP/1.1" 500 145
+2023-02-07 11:19:28,752 [ERROR] {log_response:241} : Internal Server Error: /load_dcu_node_mappings
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'draw'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 60, in load_dcu_node_mappings
+    draw = int(request_data['draw'])
+               ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'draw'
+2023-02-07 11:19:28,775 [ERROR] {log_message:187} : "GET /load_dcu_node_mappings HTTP/1.1" 500 145
+2023-02-07 11:19:40,170 [ERROR] {log_response:241} : Internal Server Error: /load_dcu_node_mappings
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 70, in load_dcu_node_mappings
+    "epochTime": dcu_node.epochTime,
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'DcuNode' object has no attribute 'epochTime'
+2023-02-07 11:19:40,177 [ERROR] {log_message:187} : "POST /load_dcu_node_mappings HTTP/1.1" 500 145
+2023-02-07 12:26:02,344 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'draw'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 27, in load_dcus
+    draw = int(request_data['draw'])
+               ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'draw'
+2023-02-07 12:26:02,407 [ERROR] {log_message:187} : "GET /load_dcus HTTP/1.1" 500 145
+2023-02-07 12:28:03,057 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'draw'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 27, in load_dcus
+    draw = int(request_data['draw'])
+               ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'draw'
+2023-02-07 12:28:03,090 [ERROR] {log_message:187} : "GET /load_dcus HTTP/1.1" 500 145
+2023-02-07 12:29:38,332 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 34, in load_dcus
+    for dcu in all_dcus[start:start+length]:
+                        ^^^^^
+NameError: name 'start' is not defined
+2023-02-07 12:29:38,344 [ERROR] {log_message:187} : "GET /load_dcus HTTP/1.1" 500 145
+2023-02-07 12:30:18,026 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 43, in load_dcus
+    "draw": draw,
+            ^^^^
+NameError: name 'draw' is not defined
+2023-02-07 12:30:18,036 [ERROR] {log_message:187} : "GET /load_dcus HTTP/1.1" 500 145
+2023-02-07 12:30:18,917 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 43, in load_dcus
+    "draw": draw,
+            ^^^^
+NameError: name 'draw' is not defined
+2023-02-07 12:30:18,922 [ERROR] {log_message:187} : "GET /load_dcus HTTP/1.1" 500 145
+2023-02-07 12:30:20,661 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 43, in load_dcus
+    "draw": draw,
+            ^^^^
+NameError: name 'draw' is not defined
+2023-02-07 12:30:20,674 [ERROR] {log_message:187} : "GET /load_dcus HTTP/1.1" 500 145
+2023-02-07 13:00:38,010 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 30, in load_dcus
+    sort_column = order[0][column]
+                  ^^^^^
+NameError: name 'order' is not defined
+2023-02-07 13:00:38,016 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 77806
+2023-02-07 13:01:55,679 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 30, in load_dcus
+    sort_column = columns[order[0][column]][name]
+                  ^^^^^^^
+NameError: name 'columns' is not defined
+2023-02-07 13:01:55,686 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 77844
+2023-02-07 13:03:24,985 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 30, in load_dcus
+    sort_column = request_data[columns[order[0][column]][name]]
+                               ^^^^^^^
+NameError: name 'columns' is not defined
+2023-02-07 13:03:25,011 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 77872
+2023-02-07 13:05:29,868 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 30, in load_dcus
+    sort_column = request_data[str(columns[int(order[0][column])][name])]
+                                   ^^^^^^^
+NameError: name 'columns' is not defined
+2023-02-07 13:05:29,873 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 77596
+2023-02-07 13:08:25,846 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 30, in load_dcus
+    sort_column_int = int(request_data[''])
+                          ~~~~~~~~~~~~^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: ''
+2023-02-07 13:08:25,868 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 89422
+2023-02-07 14:15:05,375 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 36, in load_dcus
+    from_time = datetime.datetime.strptime(str(from_time), '%Y-%m-%d %H:%M:%S')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '' does not match format '%Y-%m-%d %H:%M:%S'
+2023-02-07 14:15:05,383 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 88538
+2023-02-07 14:15:24,548 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 36, in load_dcus
+    from_time = datetime.datetime.strptime(str(from_time), '%Y-%m-%d %H:%M:%S')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '' does not match format '%Y-%m-%d %H:%M:%S'
+2023-02-07 14:15:24,621 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 88273
+2023-02-07 14:15:30,232 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 36, in load_dcus
+    from_time = datetime.datetime.strptime(str(from_time), '%Y-%m-%d %H:%M:%S')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '' does not match format '%Y-%m-%d %H:%M:%S'
+2023-02-07 14:15:30,242 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 88538
+2023-02-07 14:19:07,353 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 36, in load_dcus
+    from_time = datetime.datetime.strptime(str(from_time), '%Y-%m-%d %H:%M:%S')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\AppData\Local\Programs\Python\Python311\Lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '' does not match format '%Y-%m-%d %H:%M:%S'
+2023-02-07 14:19:07,366 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 88538
+2023-02-07 14:25:24,518 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 35, in load_dcus
+    search_value = int(search_value)
+                   ^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'df'
+2023-02-07 14:25:24,525 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 78945
+2023-02-07 14:47:22,804 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 44, in load_dcus
+    all_dcus = Dcu.objects.all().order
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'order'
+2023-02-07 14:47:22,808 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 79111
+2023-02-07 14:49:15,572 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 44, in load_dcus
+    all_dcus = Dcu.objects.order_by(sort_column).desc().all()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'desc'
+2023-02-07 14:49:15,576 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 78884
+2023-02-07 14:49:21,777 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 44, in load_dcus
+    all_dcus = Dcu.objects.order_by(sort_column).desc().all()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'desc'
+2023-02-07 14:49:21,784 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 79149
+2023-02-07 14:50:14,680 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 44, in load_dcus
+    all_dcus = Dcu.objects.order_by(sort_column).desc()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'desc'
+2023-02-07 14:50:14,686 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 79128
+2023-02-07 14:50:17,955 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 44, in load_dcus
+    all_dcus = Dcu.objects.order_by(sort_column).desc()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'desc'
+2023-02-07 14:50:17,989 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 79137
+2023-02-07 14:50:59,960 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 44, in load_dcus
+    all_dcus = Dcu.objects.all().order_by(sort_column).desc()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'desc'
+2023-02-07 14:50:59,967 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 79149
+2023-02-07 14:52:40,624 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 44, in load_dcus
+    all_dcus = Dcu.objects.order_by(-sort_column).all()
+                                    ^^^^^^^^^^^^
+TypeError: bad operand type for unary -: 'str'
+2023-02-07 14:52:40,637 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 79043
+2023-02-07 15:25:27,072 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2018, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'df'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 48, in load_dcus
+    all_dcus = all_dcus.filter(gwId=search_value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'gwId' expected a number but got 'df'.
+2023-02-07 15:25:27,096 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 138082
+2023-02-07 15:27:13,660 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 53, in load_dcus
+    print(f"{len(all_dcus)}")
+             ^^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2023-02-07 15:27:13,667 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 79164
+2023-02-07 15:27:43,533 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 53, in load_dcus
+    print(f"{len(all_dcus)}")
+             ^^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+2023-02-07 15:27:43,547 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 79164
+2023-02-07 15:28:07,868 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 59, in load_dcus
+    all_dcus = all_dcus.order_by(f"-{sort_column}").all()
+               ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'order_by'
+2023-02-07 15:28:07,873 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 79222
+2023-02-07 15:36:53,980 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 65, in load_dcus
+    "gwId": dcu.gwId,
+            ^^^^^^^^
+AttributeError: 'dict' object has no attribute 'gwId'
+2023-02-07 15:36:53,992 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 80049
+2023-02-07 15:38:18,887 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 65, in load_dcus
+    "gwId": dcu.gwId,
+            ^^^^^^^^
+AttributeError: 'dict' object has no attribute 'gwId'
+2023-02-07 15:38:18,893 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 80049
+2023-02-07 15:40:43,930 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 65, in load_dcus
+    "gwId": dcu.gwId,
+            ^^^^^^^^
+AttributeError: 'dict' object has no attribute 'gwId'
+2023-02-07 15:40:43,937 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 80049
+2023-02-07 15:41:47,619 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 65, in load_dcus
+    "gwId": dcu.gwId,
+            ^^^^^^^^
+AttributeError: 'dict' object has no attribute 'gwId'
+2023-02-07 15:41:47,626 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 80049
+2023-02-07 15:42:51,727 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 65, in load_dcus
+    "gwId": dcu.gwId,
+            ^^^^^^^^
+AttributeError: 'dict' object has no attribute 'gwId'
+2023-02-07 15:42:51,732 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 80049
+2023-02-07 16:00:42,437 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 47, in load_dcus
+    print(all_dcus.query)
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 285, in __str__
+    sql, params = self.sql_with_params()
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 293, in sql_with_params
+    return self.get_compiler(DEFAULT_DB_ALIAS).as_sql()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 618, in as_sql
+    self.compile(self.where) if self.where is not None else ("", [])
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 506, in compile
+    sql, params = node.as_sql(self, self.connection)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\where.py", line 130, in as_sql
+    raise EmptyResultSet
+django.core.exceptions.EmptyResultSet
+2023-02-07 16:00:42,445 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 101568
+2023-02-07 18:56:12,937 [ERROR] {log_response:241} : Internal Server Error: /load_dcu_node_mappings
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 114, in load_dcu_node_mappings
+    recordsTotal = len(dcu_nodes)
+                       ^^^^^^^^^
+NameError: name 'dcu_nodes' is not defined
+2023-02-07 18:56:12,952 [ERROR] {log_message:187} : "POST /load_dcu_node_mappings HTTP/1.1" 500 145
+2023-02-07 18:56:19,151 [ERROR] {log_response:241} : Internal Server Error: /load_dcu_node_mappings
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 114, in load_dcu_node_mappings
+    recordsTotal = len(dcu_nodes)
+                       ^^^^^^^^^
+NameError: name 'dcu_nodes' is not defined
+2023-02-07 18:56:19,191 [ERROR] {log_message:187} : "POST /load_dcu_node_mappings HTTP/1.1" 500 145
+2023-02-07 18:56:58,067 [ERROR] {log_response:241} : Internal Server Error: /load_dcu_node_mappings
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 116, in load_dcu_node_mappings
+    for dcu_node in dcu_nodes[start:start + length]:
+                    ^^^^^^^^^
+NameError: name 'dcu_nodes' is not defined
+2023-02-07 18:56:58,074 [ERROR] {log_message:187} : "POST /load_dcu_node_mappings HTTP/1.1" 500 145
+2023-02-07 19:01:44,557 [ERROR] {log_response:241} : Internal Server Error: /load_dcu_node_mappings
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2018, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'sdfd'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 95, in load_dcu_node_mappings
+    dcunode_mappings = dcunode_mappings.filter(Q(gwId=search_value) | Q(nodeId=search_value))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 1388, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'gwId' expected a number but got 'sdfd'.
+2023-02-07 19:01:44,603 [ERROR] {log_message:187} : "POST /load_dcu_node_mappings HTTP/1.1" 500 145
+2023-02-07 19:02:33,161 [ERROR] {log_response:241} : Internal Server Error: /load_dcu_node_mappings
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2018, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'sdfd'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 95, in load_dcu_node_mappings
+    dcunode_mappings = dcunode_mappings.filter(Q(gwId=search_value) | Q(nodeId=search_value))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 1388, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'gwId' expected a number but got 'sdfd'.
+2023-02-07 19:02:33,186 [ERROR] {log_message:187} : "POST /load_dcu_node_mappings HTTP/1.1" 500 145
+2023-02-08 11:17:33,639 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 40, in load_dcus
+    print(dcunode_mappings.query)
+          ^^^^^^^^^^^^^^^^
+NameError: name 'dcunode_mappings' is not defined
+2023-02-08 11:17:33,684 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 145
+2023-02-08 11:18:09,657 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 40, in load_dcus
+    print(all_dcus.query)
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 285, in __str__
+    sql, params = self.sql_with_params()
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\query.py", line 293, in sql_with_params
+    return self.get_compiler(DEFAULT_DB_ALIAS).as_sql()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 618, in as_sql
+    self.compile(self.where) if self.where is not None else ("", [])
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 506, in compile
+    sql, params = node.as_sql(self, self.connection)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\db\models\sql\where.py", line 130, in as_sql
+    raise EmptyResultSet
+django.core.exceptions.EmptyResultSet
+2023-02-08 11:18:09,826 [ERROR] {log_message:187} : "POST /load_dcus HTTP/1.1" 500 145
+2023-02-08 12:34:17,559 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:34:17,562 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:34:28,820 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:34:28,828 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:34:28,832 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:34:28,833 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:34:33,996 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:34:33,998 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:34:34,002 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:34:34,002 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:19,336 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:19,337 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:19,340 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:19,341 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:20,699 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:20,700 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:20,703 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:20,705 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:21,550 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:21,559 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:21,574 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:21,577 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:22,205 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:22,210 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:22,214 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:22,215 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:37,190 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:37,195 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:42,595 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:42,597 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:42,602 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:35:42,607 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:39:23,469 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:39:23,519 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:39:25,866 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:39:25,870 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:39:25,873 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:39:25,885 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:39:58,648 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:39:58,658 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:04,952 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:04,954 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:04,958 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:04,960 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:33,009 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:33,028 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:33,063 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:33,083 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:35,755 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:35,756 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:35,759 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:35,760 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:44,892 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:44,895 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:44,903 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:44,905 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:45,510 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:45,512 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:45,520 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:40:45,521 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:04,571 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:04,590 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:04,604 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:04,614 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:05,228 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:05,245 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:05,262 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:05,265 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:18,272 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:18,280 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:18,287 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:18,288 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:19,002 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:19,004 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:19,013 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:19,015 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:19,175 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:19,179 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:19,181 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:19,183 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:27,829 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:27,832 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:27,834 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:27,840 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:28,443 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:28,445 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:28,449 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:28,450 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:28,619 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:28,620 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:28,624 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:28,630 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:36,635 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:36,640 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:36,856 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:36,857 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:36,860 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:36,864 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:37,464 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:37,466 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:37,468 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:37,472 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:41,459 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:41,463 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:53,138 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:41:53,162 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:42:10,154 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:42:10,163 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:42:41,779 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:42:41,785 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:29,387 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:29,411 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:31,140 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:31,146 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:31,148 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:31,150 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:31,806 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:31,807 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:31,814 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:31,814 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:32,180 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:32,180 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:32,184 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:32,185 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:41,935 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:41,942 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:49,684 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:49,685 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:49,689 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:49,689 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:54,559 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:54,560 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:54,564 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:54,566 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:56,928 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:56,935 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:56,949 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:56,950 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:57,115 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:57,116 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:57,136 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:57,137 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:57,266 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:57,269 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:57,273 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:43:57,274 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:10,384 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:10,396 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:12,261 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:12,262 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:12,265 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:12,266 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:12,932 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:12,933 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:12,937 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:12,938 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:13,459 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:13,460 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:13,464 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:13,464 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:13,686 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:13,687 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:13,692 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:13,692 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:13,844 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:13,845 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:13,849 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:13,849 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:14,565 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:14,567 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:14,576 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:14,578 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:15,165 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:15,168 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:15,175 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:15,175 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:34,611 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:34,614 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:34,617 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 12:46:34,620 [ERROR] {log_message:167} : You're accessing the development server over HTTPS, but it only supports HTTP.
+2023-02-08 15:30:53,192 [ERROR] {log_response:241} : Internal Server Error: /load_dcus
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'draw'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 30, in load_dcus
+    draw = int(request_data['draw'])
+               ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'draw'
+2023-02-08 15:30:53,214 [ERROR] {log_message:187} : "GET /load_dcus?draw=1&columns%5B0%5D%5Bdata%5D=gwId&columns%5B0%5D%5Bname%5D=gwId&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=timestamp&columns%5B1%5D%5Bname%5D=timestamp&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=debugServerTime&columns%5B2%5D%5Bname%5D=debugServerTime&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=last_update_time&columns%5B3%5D%5Bname%5D=last_update_time&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=2&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&from_time=&till_time=&_=1675850453123 HTTP/1.1" 500 145
+2023-02-08 15:57:10,833 [ERROR] {log_response:241} : Internal Server Error: /load_dcu_node_mappings
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'columns[3][name]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 111, in load_dcu_node_mappings
+    sort_column = str(request_data[f"columns[{sort_column_num}][name]"])
+                      ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'columns[3][name]'
+2023-02-08 15:57:10,841 [ERROR] {log_message:187} : "GET /load_dcu_node_mappings?draw=1&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&from_time=&till_time=&_=1675852030758 HTTP/1.1" 500 145
+2023-02-08 15:57:19,970 [ERROR] {log_response:241} : Internal Server Error: /load_dcu_node_mappings
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'columns[3][name]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 111, in load_dcu_node_mappings
+    sort_column = str(request_data[f"columns[{sort_column_num}][name]"])
+                      ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'columns[3][name]'
+2023-02-08 15:57:19,982 [ERROR] {log_message:187} : "GET /load_dcu_node_mappings?draw=2&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&from_time=&till_time=&_=1675852030759 HTTP/1.1" 500 145
+2023-02-08 16:02:45,999 [ERROR] {log_response:241} : Internal Server Error: /load_dcu_node_mappings
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'columns[3][name]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\config\web_application\views.py", line 111, in load_dcu_node_mappings
+    sort_column = str(request_data[f"columns[{sort_column_num}][name]"])
+                      ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sambhu\Desktop\Probus_Data_Observance\venv\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'columns[3][name]'
+2023-02-08 16:02:46,014 [ERROR] {log_message:187} : "GET /load_dcu_node_mappings?draw=1&columns%5B0%5D%5Bdata%5D=nodeId&columns%5B1%5D%5Bdata%5D=gwId&columns%5B1%5D%5Borderable%5D=false&columns%5B2%5D%5Bdata%5D=timestamp&columns%5B2%5D%5Borderable%5D=false&columns%5B3%5D%5Bdata%5D=debugServerTime&columns%5B4%5D%5Bdata%5D=last_update_time&columns%5B4%5D%5Borderable%5D=false&columns%5B5%5D%5Bdata%5D=sinkId&columns%5B5%5D%5Borderable%5D=false&columns%5B6%5D%5Bdata%5D=sinkNo&columns%5B6%5D%5Borderable%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&from_time=&till_time=&_=1675852365878 HTTP/1.1" 500 145

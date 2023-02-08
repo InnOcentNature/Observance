@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+    DcuNode Map
+{% endblock %}
+
+{% block css_file %}
+    <link href="{% static 'vendor/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">DcuNode Mappings</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dcu-node-table" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>NodeId</th>
+                            <th>GatewayId</th>
+                            <th>TimeStamp</th>
+                            <th>DebugServerTime</th>
+                            <th>LastUpdateTime</th>
+                            <th>SinkId</th>
+                            <th>SinkNo</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js_file %}
+<script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'vendor/datatables/dataTables.bootstrap4.min.js' %}"></script>
+<script src="{% static 'js/custom_scripts/dcu_node_table.js' %}"></script>
+{%endblock%}
